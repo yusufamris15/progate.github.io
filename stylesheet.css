@@ -1,3 +1,9 @@
+/* Terapkan box-sizing: border-box; ke semua element */
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: "Lucida Grande";
@@ -8,7 +14,8 @@ a {
 }
 
 .container {
-  width: 1170px;
+  /* Ubah width ke 100% */
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -34,6 +41,7 @@ a {
 }
 
 .btn-wrapper {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -60,6 +68,7 @@ a {
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -74,6 +83,9 @@ header {
   height: 65px;
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -87,12 +99,7 @@ header {
 
 .header-right {
   float: right;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.5s;
-}
-
-.header-right:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: -25px;
 }
 
 .header-right a {
@@ -100,24 +107,90 @@ header {
   padding: 0 25px;
   color: white;
   display: block;
+  float: left;
+  transition: all 0.5s;
 }
 
-/* Tambahkan CSS untuk lesson-wrapper */
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .lesson-wrapper {
-  height: 500px;
+  height: 580px;
   padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #f7f7f7;
+  text-align: center;
 }
 
-/* Tambahkan CSS untuk heading */
 .heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   color: #5f5d60;
 }
 
-/* Tambahkan CSS untuk tag <h2> didalam heading */
 .heading h2 {
   font-weight: normal;
 }
 
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon {
+  position: relative;
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
